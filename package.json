@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": ":)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "frontend-dev": "npm run dev -w frontend",
     "backend-dev": "npm run dev -w backend"
   },

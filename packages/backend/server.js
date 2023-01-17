@@ -1,0 +1,34 @@
+const express = require("express");
+const cors = require("cors");
+const cookieSession = require("cookie-session");
+const app = express();
+
+app.use(cors())
+
+// 解析 json 格式的请求  content-type: application/json
+app.use(express.json());
+
+// 解析 x-www-form-urlencoded 格式的请求  content-type: application/x-www-form-urlencoded
+app.use(express.urlencoded({extended: true}));
+
+// cookie-session 有助于将 session 数据存储在 cookie 中，而不需要服务器端的任何数据库资源
+app.use(
+    cookieSession({
+        name: "zjy4fun-session",
+        secret: "COOKIE_SECRET",
+        httpOnly: true //只允许通过 HTTP/HTTPS 发送 cookie
+    })
+);
+
+//简单路由
+app.get("/", (req, res) => {
+    res.json({message: "Welcome to zjy4fun application."})
+});
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`)
+})
+
+
+

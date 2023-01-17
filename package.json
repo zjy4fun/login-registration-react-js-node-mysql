@@ -3,19 +3,10 @@
   "version": "1.0.0",
   "description": ":)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend-start": "npm run start -w frontend"
   },
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zjy4fun/login-registration-react-js-node-mysql.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zjy4fun/login-registration-react-js-node-mysql/issues"
-  },
-  "homepage": "https://github.com/zjy4fun/login-registration-react-js-node-mysql#readme",
   "workspaces": [
     "packages/frontend",
     "packages/backend"

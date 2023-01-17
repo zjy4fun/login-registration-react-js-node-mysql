@@ -72,6 +72,15 @@ const App = () => {
                         </li>
                     )}
 
+                    {currentUser && (
+                        <li className="nav-item">
+                            <Link to={"/user"} className="nav-link">
+                                User
+                            </Link>
+                        </li>
+                    )}
+                </div>
+
                     {currentUser ? (
                         <div className="navbar-anv ml-auto">
                             <li className="nav-item">
@@ -93,15 +102,13 @@ const App = () => {
                                 </Link>
                             </li>
 
-                            <li>
+                            <li className="nav-item">
                                 <Link to={"/register"} className="nav-link">
                                     Sign Up
                                 </Link>
                             </li>
                         </div>
                     )}
-
-                </div>
             </nav>
 
             <div className="container mt-3">

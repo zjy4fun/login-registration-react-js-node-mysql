@@ -4,7 +4,8 @@
   "description": ":)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "frontend-start": "npm run start -w frontend"
+    "frontend-dev": "npm run dev -w frontend",
+    "backend-dev": "npm run dev -w backend"
   },
   "private": true,
   "workspaces": [

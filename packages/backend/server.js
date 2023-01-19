@@ -23,6 +23,7 @@ app.use(
 const db = require("./app/models");
 const Role = db.role;
 
+// force: true  ==> drop existing table then re-sync database
 db.sequelize.sync({force: true}).then(() => {
     console.log('Drop and Resync Db');
     initial();
@@ -45,7 +46,7 @@ function initial() {
     })
 }
 
-//简单路由
+// 简单路由
 app.get("/", (req, res) => {
     res.json({message: "Welcome to zjy4fun application."})
 });

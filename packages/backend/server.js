@@ -1,6 +1,10 @@
 const express = require("express");
 const cors = require("cors");
 const cookieSession = require("cookie-session");
+
+require("./app/routes/auth.routes");
+require("./app/routes/user.routes");
+
 const app = express();
 
 app.use(cors())

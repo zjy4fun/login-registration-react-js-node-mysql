@@ -31,13 +31,13 @@ exports.signup = async (req, res) => {
                 res.send({
                     message: "User registered successfully!"
                 })
-            }else{
-                const result = user.setRoles([1]);
-                if(result) {
-                    res.send({
-                        message: "User registered successfully!"
-                    });
-                }
+            }
+        } else {
+            const result = user.setRoles([1]);
+            if (result) {
+                res.send({
+                    message: "User registered successfully!"
+                });
             }
         }
     } catch (error) {

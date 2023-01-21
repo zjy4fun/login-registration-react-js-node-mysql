@@ -1,13 +1,16 @@
 const express = require("express");
 const cors = require("cors");
 const cookieSession = require("cookie-session");
+const pino = require('pino-http')()
 
 require("./app/routes/auth.routes");
 require("./app/routes/user.routes");
 
 const app = express();
 
-app.use(cors())
+app.use(pino);
+
+app.use(cors());
 
 // 解析 json 格式的请求  content-type: application/json
 app.use(express.json());

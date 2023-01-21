@@ -14,7 +14,7 @@ exports.signup = async (req, res) => {
 //         console.log(req);
 //         console.log("===============================")
 //         req.log.info();
-        console.log("111")
+//        console.log("111")
 //         res.log.info();
         const user = await User.create({
             username: req.body.username,

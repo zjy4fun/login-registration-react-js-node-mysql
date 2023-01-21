@@ -4,7 +4,8 @@
   "description": ":)",
   "scripts": {
     "frontend-dev": "npm run dev -w frontend",
-    "backend-dev": "npm run dev -w backend"
+    "backend-dev": "npm run dev -w backend",
+    "backend-debug": "npm run debug -w backend"
   },
   "private": true,
   "workspaces": [

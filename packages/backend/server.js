@@ -3,8 +3,7 @@ const cors = require("cors");
 const cookieSession = require("cookie-session");
 const pino = require('pino-http')()
 
-require("./app/routes/auth.routes");
-require("./app/routes/user.routes");
+
 
 const app = express();
 
@@ -57,6 +56,9 @@ function initial() {
 app.get("/", (req, res) => {
     res.json({message: "Welcome to zjy4fun application."})
 });
+
+require("./app/routes/auth.routes")(app);
+require("./app/routes/user.routes")(app);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

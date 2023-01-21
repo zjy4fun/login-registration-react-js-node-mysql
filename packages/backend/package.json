@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "node server.js",
+    "debug": "node server.js | pino-pretty",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -25,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/zjy4fun/login-registration-react-js-node-mysql/issues"
   },
-  "homepage": "https://github.com/zjy4fun/login-registration-react-js-node-mysql#readme"
+  "homepage": "https://github.com/zjy4fun/login-registration-react-js-node-mysql#readme",
+  "devDependencies": {
+    "pino-pretty": "^9.1.1"
+  }
 }

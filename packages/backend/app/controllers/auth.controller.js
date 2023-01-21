@@ -1,4 +1,3 @@
-const logger = require('pino')
 const db = require('../models');
 const config = require('../config/auth.config');
 const User = db.user;
@@ -12,7 +11,11 @@ const bcrypt = require('bcryptjs');
 exports.signup = async (req, res) => {
     // Save User to Database
     try {
-        logger(req, res)
+//         console.log(req);
+//         console.log("===============================")
+//         req.log.info();
+        console.log("111")
+//         res.log.info();
         const user = await User.create({
             username: req.body.username,
             email: req.body.email,
